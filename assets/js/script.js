@@ -1,6 +1,5 @@
 const btn1 = document.getElementById("btn1");
-const btn2 = document.getElementById("btn2");
-const btn3 = document.querySelector("#btn3");
+const btn2 = document.querySelector("#btn2");
 const btnAll = document.querySelectorAll(".btn");
 
 console.log("Task1");
@@ -54,13 +53,12 @@ console.log("--------------------------------------------");
 
 console.log("Task4");
 
-function AddNumbers() {
+let AddNumbers = function () {
   let a = Number(prompt("Введите число a")),
     b = Number(prompt("Введите число b"));
-  res = a + b;
-  console.log(res);
-}
-btn2.addEventListener("click", AddNumbers);
+  return a + b;
+};
+console.log(AddNumbers());
 
 console.log("--------------------------------------------");
 
@@ -71,7 +69,7 @@ function SubNumbers() {
   console.log(res);
 }
 
-btn3.addEventListener("click", SubNumbers);
+btn2.addEventListener("click", SubNumbers);
 
 console.log("--------------------------------------------");
 
