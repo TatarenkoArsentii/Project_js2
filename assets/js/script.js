@@ -103,7 +103,7 @@ console.log("--------------------------------------------");
 
 console.log("Task5");
 
-function getNumkber() {
+function getNumber() {
   let num = prompt("Введите число");
 
   while (num >= 0) {
@@ -111,7 +111,7 @@ function getNumkber() {
     num--;
   }
 }
-btnAll[2].addEventListener("click", getNumkber);
+btnAll[2].addEventListener("click", getNumber);
 
 console.log("--------------------------------------------");
 
