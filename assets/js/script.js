@@ -148,7 +148,7 @@ console.log("Task7");
     i = 1000;
   console.log(`Стартовое значение = ${i}`);
   do {
-    i = i / 2;
+    i /= 2;
     console.log(`делим на 2 , результат = ${i}`);
     count++;
   } while (i > 50);
