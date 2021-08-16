@@ -1,3 +1,8 @@
+const btn1 = document.getElementById("btn1");
+const btn2 = document.getElementById("btn2");
+const btn3 = document.querySelector("#btn3");
+const btnAll = document.querySelectorAll(".btn");
+
 console.log("Task1");
 let res = "\n";
 
@@ -17,7 +22,6 @@ while (i <= limit) {
 console.log(res2);
 console.log("--------------------------------------------");
 console.log("Task3");
-const btn1 = document.getElementById("btn1");
 
 function dash() {
   let lim1 = 1,
@@ -49,10 +53,6 @@ dash2(prompt('"Введите кол-во повторений"'));
 console.log("--------------------------------------------");
 
 console.log("Task4");
-const btn2 = document.getElementById("btn2");
-const btn3 = document.getElementById("btn3");
-const btn4 = document.getElementById("btn4");
-const btn5 = document.getElementById("btn5");
 
 function AddNumbers() {
   let a = Number(prompt("Введите число a")),
@@ -82,7 +82,7 @@ function MultNumbers() {
   console.log(res);
 }
 
-btn4.addEventListener("click", MultNumbers);
+btnAll[0].addEventListener("click", MultNumbers);
 
 console.log("--------------------------------------------");
 
@@ -97,12 +97,11 @@ function DivNumbers() {
   }
 }
 
-btn5.addEventListener("click", DivNumbers);
+btnAll[1].addEventListener("click", DivNumbers);
 
 console.log("--------------------------------------------");
 
 console.log("Task5");
-const btn6 = document.getElementById("btn6");
 
 function getNumkber() {
   let num = prompt("Введите число");
@@ -112,14 +111,13 @@ function getNumkber() {
     num--;
   }
 }
-btn6.addEventListener("click", getNumkber);
+btnAll[2].addEventListener("click", getNumkber);
 
 console.log("--------------------------------------------");
 
 console.log("Task5-2");
-const btn7 = document.getElementById("btn7");
 
-btn7.addEventListener("click", () => {
+btnAll[3].addEventListener("click", () => {
   let num = prompt("Введите число");
 
   for (let i = 0; i <= num; i++) {
@@ -165,20 +163,18 @@ console.log("Task8");
 function closestNum(userNumber) {
   userNumber < 11
     ? console.log("Некорректный ввод")
-    : console.log(Math.round(userNumber / 11) * 11);
+    : console.log(Math.round(userNumber % 11) * 11);
 }
 closestNum(prompt("Введите X"));
 
 console.log("Task8-2");
 
 let getClosestNum = (a, b, x = Math.trunc(a / b)) => {
-  if (a > b) {
+  if (a >= b) {
     if (!(a % b)) return a;
     return b * (x + 1) - a < a - b * x ? b * (x + 1) : b * x;
   }
   return "Некорректный ввод данных";
 };
 
-console.log(
-  getClosestNum(prompt("Введите первое число"), prompt("Введите второе число "))
-);
+console.log(getClosestNum(prompt("Введите первое число"), 11));
