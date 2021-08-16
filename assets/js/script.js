@@ -13,7 +13,7 @@ console.log(res);
 console.log("--------------------------------------------");
 console.log("Task2");
 let i = 1,
-  limit = prompt("Введите кол-во повторений"),
+  limit = prompt("Task2 Введите кол-во повторений"),
   res2 = "\n";
 while (i <= limit) {
   res2 += "\n - ";
@@ -25,7 +25,7 @@ console.log("Task3");
 
 function dash() {
   let lim1 = 1,
-    lim2 = prompt("Введите кол-во повторений"),
+    lim2 = prompt("Task3 Введите кол-во повторений"),
     res3 = "\n";
   while (lim1 <= lim2) {
     res3 += "\n - ";
@@ -48,7 +48,7 @@ function dash2(lim1, lim2 = 1) {
   }
   console.log(res4);
 }
-dash2(prompt('"Введите кол-во повторений"'));
+dash2(prompt("Task3-2 Введите кол-во повторений"));
 
 console.log("--------------------------------------------");
 
@@ -177,4 +177,9 @@ let getClosestNum = (a, b, x = Math.trunc(a / b)) => {
   return "Некорректный ввод данных";
 };
 
-console.log(getClosestNum(prompt("Введите первое число"), 11));
+console.log(
+  getClosestNum(
+    prompt("Task8 Введите первое число"),
+    prompt("Task8 Введите второе число")
+  )
+);
