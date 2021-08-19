@@ -175,9 +175,4 @@ let getClosestNum = (a, b, x = Math.trunc(a / b)) => {
   return "Некорректный ввод данных";
 };
 
-console.log(
-  getClosestNum(
-    prompt("Task8 Введите первое число"),
-    prompt("Task8 Введите второе число")
-  )
-);
+console.log(getClosestNum(prompt("Task8 Введите первое число"), 11));
