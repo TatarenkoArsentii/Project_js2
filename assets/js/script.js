@@ -161,7 +161,7 @@ console.log("Task8");
 function closestNum(userNumber) {
   userNumber < 11
     ? console.log("Некорректный ввод")
-    : console.log(Math.round(userNumber % 11) * 11);
+    : console.log(Math.round(userNumber / 11) * 11);
 }
 closestNum(prompt("Введите X"));
 
